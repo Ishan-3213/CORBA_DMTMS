@@ -6,5 +6,6 @@ module InterfaceOperationApp{
     string listMovieShowsAvailability(in string movieName);
     string getBookingSchedule(in string customerID);
     string bookMovieTickets(in string customerID, in string movieId, in string movieName, in long numberOfTickets);
+    string exchangeMovieTickets(in string customerID, in string movieId, in string movieName, in string new_movieId, in string new_movieName, in long numberOfTickets);
     };
 };

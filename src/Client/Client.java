@@ -14,25 +14,25 @@ import org.omg.CosNaming.NamingContextExtHelper;
 import java.util.logging.Logger;
 public class Client {
     static String user_id;
-    static Integer RMIPortNumber;
+//    static Integer CORBAPortNumber;
     public static void main(String[] args) {
         Log logger;
         try (Scanner read = new Scanner(System.in)){
             System.out.println("\nPlease enter your UserID: ");
             user_id = (read.nextLine()).toUpperCase();
             while(user_id.length()!=8 ){
-                System.out.println("\nPlease enter valid UserId !!");
+                System.out.println("\nPlease enter valid UserId! Enter it again.");
                 user_id = (read.nextLine()).toUpperCase();
             }
             while(true){
                 if (user_id.startsWith("ATW")){
-                    RMIPortNumber = 8001;
+//                    CORBAPortNumber = 8001;
                     break;
                 }else if (user_id.startsWith("VER")){
-                    RMIPortNumber = 8002;
+//                    CORBAPortNumber = 8002;
                     break;
                 } else if (user_id.startsWith("OUT")) {
-                    RMIPortNumber = 8003;
+//                    CORBAPortNumber = 8003;
                     break;
                 }else {
                     System.out.println("\nPlease enter valid UserId !!");
@@ -78,7 +78,8 @@ public class Client {
                         System.out.println("1. Book movie tickets.");
                         System.out.println("2. List your booked movie tickets.");
                         System.out.println("3. Cancel movie tickets. ");
-                        System.out.println("4. Exit.");
+                        System.out.println("4. Exchange the movie tickets. ");
+                        System.out.println("5. Exit.");
                         user_choice = Integer.parseInt(read.nextLine()) ;
                         switch (user_choice) {
                             case 1:
@@ -137,9 +138,7 @@ public class Client {
                                 }
                                 break;
                             case 3:
-                                System.out.println();
-
-                                System.out.println("Please Enter UserId again: ");
+                                System.out.println("\nPlease Enter UserId again: ");
                                 String userId_cancel = (read.nextLine()).toUpperCase();
 
                                 while(userId_cancel.length() > 8){
@@ -159,8 +158,7 @@ public class Client {
                                     break;
                                 }
                                 else{
-                                    System.out.println();
-                                    System.out.println("Here is the booked shows with the userID - "+user_id);
+                                    System.out.println("\nHere is the booked shows with the userID - "+user_id);
                                     System.out.println(booked_movie + "\n");
                                 }
                                 System.out.println("Enter movie name you want to cancel from the option.");
@@ -187,6 +185,70 @@ public class Client {
                                 LogObj.info(reply);
                                 break;
                             case 4:
+                                String movie_booked =intOpr.getBookingSchedule(user_id);
+                                if(movie_booked.isEmpty()){
+                                    System.out.println("There is no booked movie tickets found with the ID -" + user_id);
+                                    LogObj.info(user_id + " has no booked movie tickets.");
+                                    break;
+                                }
+                                else{
+                                    System.out.println("\nHere is the booked shows with the userID - "+user_id);
+                                    System.out.println(movie_booked + "\n");
+                                }
+                                System.out.println("Enter movie name you want to exchange.");
+                                movieName = (read.nextLine()).toUpperCase();
+                                if (!movie_booked.contains(movieName)){
+                                    System.out.println("You have no show booked for the movie "+ movieName );
+                                    LogObj.info(user_id + " has no booked for the movie "+ movieName);
+                                    break;
+                                }
+                                System.out.println("\nEnter the movieId you want to exchange.");
+                                movieID = (read.nextLine()).toUpperCase();
+                                if (!movie_booked.contains(movieID)){
+                                    System.out.println("You have no show booked with the movieID "+ movieID );
+                                    LogObj.info(user_id + " has no booked for the movieID "+ movieID);
+                                    break;
+                                }
+                                System.out.println("Enter movie name you want to exchange.");
+                                System.out.println("AVATAR \t AVENGER \t TITANIC");
+                                String New_movieName = (read.nextLine()).toUpperCase();
+                                if (New_movieName.isEmpty()){
+                                    System.out.println("Invalid movie-Name\n");
+                                    LogObj.info("Invalid movie-Name\n");
+                                    break;
+                                }
+                                String new_movie_shows =intOpr.listMovieShowsAvailability(New_movieName);
+                                if(new_movie_shows.isEmpty()){
+                                    System.out.println("Sorry there is no show available for " + New_movieName);
+                                    LogObj.info("Sorry there is no show available for " + New_movieName);
+                                    break;
+                                }
+                                else{
+                                    System.out.println();
+                                    System.out.println("Here is the movie shows available for the "+New_movieName);
+                                    System.out.println(new_movie_shows.replace("<>", "-"));
+                                }
+                                System.out.println("\nOld-Movie: " + movieName + "-"+movieID);
+                                System.out.println("\nEnter the movieId you want to exchange tickets with.");
+                                String new_movieID = (read.nextLine()).toUpperCase();
+                                if (new_movieID.isEmpty()){
+                                    System.out.println("Invalid movie-ID!\n");
+                                    LogObj.info(user_id + " User has entered invalid movie-ID\n");
+                                    break;
+                                }
+                                long day = DaysLeft(new_movieID);
+                                if (day>7 | day<0) {
+                                    System.out.println("Can not book tickets later than 1 week/before today.\n");
+                                    LogObj.info("Can not book tickets later than 1 week/before today.\n");
+                                    break;
+                                }
+                                int Capacity = 0;
+                                String exchange_movie = intOpr.exchangeMovieTickets(user_id, movieID, movieName, new_movieID, New_movieName, Capacity);
+                                System.out.println(exchange_movie);
+                                LogObj.info(exchange_movie);
+                                break;
+                            case 5:
+                                System.out.println("Logging Out...!");
                                 choice = false;
                                 login = false;
                                 break;
