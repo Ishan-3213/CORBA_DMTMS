@@ -1,0 +1,84 @@
+Feb 24, 2023 12:53:51 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 12:54:04 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 12:54:15 PM Server.Servers serve_listener
+INFO: Message from the server VER in list_movie at the port 8002
+Feb 24, 2023 12:57:33 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 12:57:38 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 12:57:46 PM Server.Servers serve_listener
+INFO: Message from the server VER in list_movie at the port 8002
+Feb 24, 2023 12:58:15 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:10:22 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:10:25 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:10:40 PM Server.Servers serve_listener
+INFO: Message from the server VER in list_movie at the port 8002
+Feb 24, 2023 1:10:49 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:10:49 PM Server.Servers serve_listener
+INFO: Message from the server VER in cancelMovieTickets at the port 8002
+Feb 24, 2023 1:10:49 PM Server.Servers serve_listener
+INFO: Message from the server VER in bookMovieTickets at the port 8002
+Feb 24, 2023 1:22:20 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:22:28 PM Server.Servers serve_listener
+INFO: Message from the server VER in list_movie at the port 8002
+Feb 24, 2023 1:22:32 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:22:32 PM Server.Servers serve_listener
+INFO: Message from the server VER in cancelMovieTickets at the port 8002
+Feb 24, 2023 1:22:32 PM Server.Servers serve_listener
+INFO: Message from the server VER in bookMovieTickets at the port 8002
+Feb 24, 2023 1:22:32 PM Server.Servers serve_listener
+INFO: Message from the server VER in bookMovieTickets at the port 8002
+Feb 24, 2023 1:24:22 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:24:34 PM Server.Servers serve_listener
+INFO: Message from the server VER in list_movie at the port 8002
+Feb 24, 2023 1:24:38 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:24:38 PM Server.Servers serve_listener
+INFO: Message from the server VER in cancelMovieTickets at the port 8002
+Feb 24, 2023 1:24:38 PM Implementation.ImplementationOperations ExchangeMovieShow
+INFO: 15 tickets booked for the movie AVATAR-VERA03032023
+Feb 24, 2023 1:24:38 PM Server.Servers serve_listener
+INFO: Message from the server VER in bookMovieTickets at the port 8002
+Feb 24, 2023 1:24:38 PM Implementation.ImplementationOperations ExchangeMovieShow
+INFO: 15 tickets booked for the movie AVATAR-VERA03032023
+Feb 24, 2023 1:24:38 PM Server.Servers serve_listener
+INFO: Message from the server VER in bookMovieTickets at the port 8002
+Feb 24, 2023 1:27:00 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:27:08 PM Server.Servers serve_listener
+INFO: Message from the server VER in list_movie at the port 8002
+Feb 24, 2023 1:27:23 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:27:31 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:27:40 PM Server.Servers serve_listener
+INFO: Message from the server VER in list_movie at the port 8002
+Feb 24, 2023 1:27:44 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:27:44 PM Server.Servers serve_listener
+INFO: Message from the server VER in cancelMovieTickets at the port 8002
+Feb 24, 2023 1:27:44 PM Implementation.ImplementationOperations ExchangeMovieShow
+INFO: 15 tickets booked for the movie AVATAR-VERA03032023
+Feb 24, 2023 1:27:44 PM Server.Servers serve_listener
+INFO: Message from the server VER in bookMovieTickets at the port 8002
+Feb 24, 2023 1:27:44 PM Implementation.ImplementationOperations ExchangeMovieShow
+INFO: 15 tickets booked for the movie AVATAR-VERA03032023
+Feb 24, 2023 1:27:44 PM Server.Servers serve_listener
+INFO: Message from the server VER in bookMovieTickets at the port 8002
+Feb 24, 2023 1:28:00 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:28:09 PM Server.Servers serve_listener
+INFO: Message from the server VER in list_movie at the port 8002
+Feb 24, 2023 1:28:23 PM Server.Servers serve_listener
+INFO: Message from the server VER in booking_schedule at the port 8002
+Feb 24, 2023 1:28:32 PM Server.Servers serve_listener
+INFO: Message from the server VER in list_movie at the port 8002

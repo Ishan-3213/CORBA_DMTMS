@@ -34,56 +34,169 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
         if(server_name.equals("ATW")){
 
             booking_hashmap = datastorage.get("AVENGER");
-            booking_hashmap.put("ATWM24022023", 50);
-            booking_hashmap.put("ATWE23042023", 50);
+            booking_hashmap.put("ATWM11032023", 50);
+            booking_hashmap.put("ATWE13032023", 50);
             datastorage.put("AVENGER", booking_hashmap);
 
             booking_hashmap = datastorage.get("TITANIC");
-            booking_hashmap.put("ATWA13042023", 50);
+            booking_hashmap.put("ATWA15032023", 50);
             datastorage.put("TITANIC", booking_hashmap);
 
             user_data.put("ATWC1234", new HashMap<String, Integer>());
 
             customer_booking_hashmap = user_data.get("ATWC1234");
-            customer_booking_hashmap.put("AVENGER-ATWM13042023", 5);
+            customer_booking_hashmap.put("AVENGER-ATWM11032023", 15);
             user_data.put("ATWC1234", customer_booking_hashmap);
 
         }else if(server_name.equals("VER")){
             booking_hashmap = datastorage.get("AVATAR");
-            booking_hashmap.put("VERA23042023", 50);
+            booking_hashmap.put("VERA03032023", 50);
             datastorage.put("AVATAR", booking_hashmap);
 
             booking_hashmap = datastorage.get("TITANIC");
-            booking_hashmap.put("VERE23042023", 50);
-            booking_hashmap.put("VERM20042023", 50);
+            booking_hashmap.put("VERE02032023", 50);
+            booking_hashmap.put("VERM05032023", 50);
             datastorage.put("TITANIC", booking_hashmap);
 
             user_data.put("VERC4321", new HashMap<String, Integer>());
 
             customer_booking_hashmap = user_data.get("VERC4321");
-            customer_booking_hashmap.put("TITANIC-VERM20042023", 10);
+            customer_booking_hashmap.put("TITANIC-VERM05032023", 10);
             user_data.put("VERC4321", customer_booking_hashmap);
 
         }else if(server_name.equals("OUT")){
 
             booking_hashmap = datastorage.get("AVATAR");
-            booking_hashmap.put("OUTM16022023", 100);
-            booking_hashmap.put("OUTE15022023", 100);
+            booking_hashmap.put("OUTM16032023", 100);
+            booking_hashmap.put("OUTE15032023", 100);
             datastorage.put("AVATAR", booking_hashmap);
 
             booking_hashmap = datastorage.get("AVENGER");
-            booking_hashmap.put("OUTA20042023", 100);
-            booking_hashmap.put("OUTM24022023", 40);
+            booking_hashmap.put("OUTA01032023", 100);
+            booking_hashmap.put("OUTM29022023", 40);
             datastorage.put("AVENGER", booking_hashmap);
 
             user_data.put("OUTC4321", new HashMap<String, Integer>());
             customer_booking_hashmap = user_data.get("OUTC4321");
-            customer_booking_hashmap.put("AVENGER-OUTM23042023", 10);
+            customer_booking_hashmap.put("AVENGER-OUTM29022023", 10);
             user_data.put("OUTC4321", customer_booking_hashmap);
         }
     }
     public void setORB(ORB orb_val) {
         orb = orb_val;
+    }
+
+    @Override
+    public String exchangeMovieTickets(String customerID, String movieId, String movieName, String new_movieId, String new_movieName, int numberOfTickets) {
+        String customer_schedule = getBookingSchedule(customerID);
+        for (String x : customer_schedule.split("\n")){
+            if (x.contains(movieName+"-"+movieId+":")){
+                String data = x.replace(movieName+"-"+movieId+":", "");
+                numberOfTickets = Integer.parseInt(data.trim());
+                System.out.println("\n\n\n checking the condition-->>" + numberOfTickets);
+            }
+        }
+        boolean can_book = conditionChecks(new_movieName, new_movieId,numberOfTickets);
+        if (can_book) {
+            String check_cancel = cancelMovieTickets(customerID, movieId, movieName, numberOfTickets);
+            String check_booking = ExchangeMovieShow(customerID, new_movieName, new_movieId, numberOfTickets);
+            System.out.println("\n Process says-->" + check_cancel + "\nbooked-->" + check_booking);
+            if (check_cancel.toUpperCase().substring(0,2).equals("NO") | check_booking.toUpperCase().substring(0,2).equals("NO")){
+                return "Process failed.";
+            }
+            return check_cancel + " & " + check_booking;
+        }
+        return "Sorry can not exchange the movie.";
+    }
+
+    public String ExchangeMovieShow(String customerID,String new_movieName, String new_movieId, int numberOfTickets ){
+            String methodsList;
+            StringBuilder sBuilder = new StringBuilder();
+            if(new_movieId.substring(0,3).equals(this.server_name))  {
+                if(datastorage.containsKey(new_movieName)){
+                    if(datastorage.get(new_movieName).containsKey(new_movieId)){
+                        if(datastorage.get(new_movieName).get(new_movieId) > numberOfTickets){
+                            System.out.println("Tickets in the server----->>" + server_name +  "\nStrg-->" + datastorage.get(new_movieName).get(new_movieId));
+                            datastorage.get(new_movieName).put(new_movieId, datastorage.get(new_movieName).get(new_movieId) - numberOfTickets);
+                            System.out.println("\n\n" + " tickets removal done-->> " + datastorage.get(new_movieName).get(new_movieId));
+                            // Tickets are available 0
+                            String movie_string = new_movieName + "-" + new_movieId;
+                            if (user_data.containsKey(customerID)){
+                                System.out.println("\n\nUSer data in server " + server_name + " data-->" + user_data);
+                                if (user_data.get(customerID).containsKey(movie_string) ){
+                                    user_data.get(customerID).put(movie_string, user_data.get(customerID).get(movie_string) + numberOfTickets);
+                                    System.out.println(user_data.get(customerID) + " --Already booked tickets for the same movie id-- " + customer_booking_hashmap);
+                                    LogObj.info(numberOfTickets + " tickets booked for the movie " + new_movieName + "-" + new_movieId);
+
+                                    return numberOfTickets + " tickets booked for the movie " + new_movieName + "-" + new_movieId;
+                                }else{
+                                    // add data to the existing cutomer id in hashmap
+                                    user_data.get(customerID).put(movie_string, numberOfTickets);
+                                    System.out.println("Customer-ID --->>"+ customerID + " ---" + user_data.get(customerID) + " --Tickets added -- " + customer_booking_hashmap);
+                                    LogObj.info(numberOfTickets + " tickets booked for the movie " + new_movieName + "-" + new_movieId);
+                                    return numberOfTickets + " tickets booked for the movie " + new_movieName + "-" + new_movieId;
+                                }
+                            }else{
+                                // create new customer id in hasmap
+                                user_data.putIfAbsent(customerID, new HashMap<String, Integer>());
+                                customer_booking_hashmap = user_data.get(customerID);
+                                customer_booking_hashmap.put(movie_string, numberOfTickets);
+                                user_data.put(customerID, customer_booking_hashmap);
+                                System.out.println(user_data.get(customerID) + " --New User-- " + user_data);
+                                LogObj.info(numberOfTickets + " tickets booked for the movie " + new_movieName + "-" + new_movieId);
+                                return numberOfTickets + " tickets booked for the movie " + new_movieName + "-" + new_movieId;
+                            }
+                        }else{
+                            LogObj.info(numberOfTickets + " Seats are not available for the " + new_movieName + " - " + new_movieId);
+                            return "NO " + numberOfTickets + " Seats are not available for the " + new_movieName + " - " + new_movieId;
+                        }
+                    }else{
+                        LogObj.info("No movie found with the ID" + new_movieId);
+                        return "No movie found with the ID" + new_movieId;
+                    }
+                }
+                LogObj.info("No movie found with the namw" + new_movieName);
+                return "No movie found with the name " + new_movieName;
+            }else{
+                // method + "<>" + movie_name + "<>" + movie_id + "<>" + customer_id + "<>" + tickets
+                methodsList = "ExchangeMovieShow" + "<>" + new_movieName + "<>" + new_movieId + "<>" + customerID + "<>" + numberOfTickets;
+                if(new_movieId.substring(0, 3).equals("VER") && !(new_movieId.substring(0,3).equals(this.server_name))){
+                    sBuilder.append(sending_message(methodsList, "VER", 8002));
+                }else if(new_movieId.substring(0, 3).equals("OUT") && !(new_movieId.substring(0,3).equals(this.server_name))){
+                    sBuilder.append(sending_message(methodsList, "OUT", 8003));
+                }else if(new_movieId.substring(0, 3).equals("ATW") && !(new_movieId.substring(0,3).equals(this.server_name))){
+                    sBuilder.append(sending_message(methodsList, "ATW", 8001));
+                }
+                return sBuilder.toString();
+            }
+    }
+
+    public boolean conditionChecks(String movieName, String movieID, int Capacity){
+        String movie_prefix = movieID.substring(0,3);
+        String methodsList;
+        String reply = null;
+        if (movie_prefix.equals(this.server_name)){
+            if (this.datastorage.containsKey(movieName)){
+                if (this.datastorage.get(movieName).containsKey(movieID)){
+                    if ((this.datastorage.get(movieName).get(movieID))>Capacity){
+                        return true;
+                    }
+                }
+            }
+        }else {
+            methodsList = "condition_checks" + "<>" + movieName + "<>" + movieID + "<>" + null + "<>" + Capacity;
+            if(movie_prefix.equals("VER") && !(movie_prefix.equals(this.server_name))){
+                reply = sending_message(methodsList, "VER", 8002);
+            }else if(movie_prefix.equals("OUT") && !(movie_prefix.equals(this.server_name))){
+                reply = sending_message(methodsList, "OUT", 8003);
+            }else if(movie_prefix.equals("ATW") && !(movie_prefix.equals(this.server_name))){
+                reply = sending_message(methodsList, "ATW", 8001);
+            }
+            if (!(reply.isEmpty()) && reply.equals("Yes")){
+                return true;
+            }
+        }
+        return false;
     }
     @Override
     public String cancelMovieTickets(String customerID, String movieID, String movieName, int numberOfTickets) {
@@ -102,13 +215,13 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
                         System.out.println(user_data.get(customerID).get(movie_string) + " ELSE Here is the user data " + "\n------>>" + "\n...custome id"+user_data.get(customerID)+"\n ehole user data" + user_data);
                         return numberOfTickets + " Movie tickets for " + movieName + " has been removed";
                     }else{
-                        return "Please enter valid ticket number to be removed!!";
+                        return "NO..!Please enter valid ticket number to be removed!!";
                     }
                 }else{
-                    return "No movie found with the movieID- " + movieID;
+                    return "NO movie found with the movieID- " + movieID;
                 }
             }else{
-                return "There is no userdata found with the id " + customerID;
+                return "NO userdata found with the id " + customerID;
             }
         }else {
             StringBuilder sBuilder = new StringBuilder();
@@ -166,14 +279,12 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
                 return "You cannot book more than 3 tickets on other theater";
             }
         }
-//        String [] check_data = getBookingSchedule(customerID).split("\n");
         for (String check_data : getBookingSchedule(customerID).split("\n")){
             if (check_data.contains(movieName) && check_data.contains(movieId.substring(4,12))) {
                 System.out.println("Already Booked ticket in another theater!");
                 return "Tickets are already booked in another theater.";
             }
         }
-
         if(movieId.substring(0,3).equals(this.server_name))  {
             if(datastorage.containsKey(movieName)){
                 if(datastorage.get(movieName).containsKey(movieId)){
@@ -230,11 +341,6 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
                 sBuilder.append(sending_message(methodsList, "ATW", 8001));
             }
             return sBuilder.toString();
-//        if(count<=3){
-//        }else{
-//            return "Customer with the id " + customerID + " has exceeded the limit of booking in other area.";
-//        }
-
         }
     }
     @Override

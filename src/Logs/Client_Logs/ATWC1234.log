@@ -1,0 +1,44 @@
+Feb 24, 2023 12:53:49 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: ATWC1234
+Feb 24, 2023 12:54:02 PM Client.Client AvailableOptions
+INFO: ATWC1234 has no booked for the movie AVATAR
+Feb 24, 2023 12:54:29 PM Client.Client AvailableOptions
+INFO: Can not book tickets later than 1 week/before today.
+
+Feb 24, 2023 12:57:32 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: ATWC1234
+Feb 24, 2023 12:57:33 PM Client.Client AvailableOptions
+INFO: ATWC1234's booking schedule: 
+AVENGER-ATWM11032023:15
+
+Feb 24, 2023 1:10:20 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: ATWC1234
+Feb 24, 2023 1:10:22 PM Client.Client AvailableOptions
+INFO: ATWC1234's booking schedule: 
+AVENGER-ATWM11032023:15
+
+Feb 24, 2023 1:22:18 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: ATWC1234
+Feb 24, 2023 1:24:20 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: ATWC1234
+Feb 24, 2023 1:26:58 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: ATWC1234
+Feb 24, 2023 1:27:13 PM Client.Client AvailableOptions
+INFO: Can not book tickets later than 1 week/before today.
+
+Feb 24, 2023 1:27:23 PM Client.Client AvailableOptions
+INFO: ATWC1234's booking schedule: 
+AVENGER-ATWM11032023:15
+
+Feb 24, 2023 1:27:44 PM Client.Client AvailableOptions
+INFO: 15 Movie tickets for AVENGER has been removed & 15 tickets booked for the movie AVATAR-VERA03032023
+Feb 24, 2023 1:28:00 PM Client.Client AvailableOptions
+INFO: ATWC1234's booking schedule: 
+AVATAR-VERA03032023:15
+
+Feb 24, 2023 1:28:08 PM Client.Client AvailableOptions
+INFO: ATWC1234 wants to book movie.
+Feb 24, 2023 1:28:23 PM Client.Client AvailableOptions
+INFO: You cannot book more than 3 tickets on other theater
+Feb 24, 2023 1:28:30 PM Client.Client AvailableOptions
+INFO: ATWC1234 wants to book movie.

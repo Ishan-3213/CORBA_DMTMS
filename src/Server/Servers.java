@@ -22,13 +22,13 @@ import org.omg.PortableServer.POAPackage.ServantNotActive;
 import org.omg.PortableServer.POAPackage.WrongPolicy;
 
 public class Servers implements Runnable {
-    int RMIPortNum;
+    int CORBAPortNumber;
     String server_name;
     Logger LogObj;
-    Servers(int RMIPortNum, String server_name, Logger LogObj, String[] args){
+    Servers(int CORBAPortNumber, String server_name, Logger LogObj, String[] args){
         super();
             this.server_name = server_name;
-            this.RMIPortNum = RMIPortNum;
+            this.CORBAPortNumber = CORBAPortNumber;
             this.LogObj = LogObj;
     }
 
@@ -39,9 +39,9 @@ public class Servers implements Runnable {
         String movie_name;
         String method;
         try {
-            datasocket = new DatagramSocket(this.RMIPortNum);
+            datasocket = new DatagramSocket(this.CORBAPortNumber);
             byte [] buffer = new byte[1024];
-            System.out.println("Server ->" + this.server_name +"\n" + "Port ->" + this.RMIPortNum);
+            System.out.println("Server ->" + this.server_name +"\n" + "Port ->" + this.CORBAPortNumber);
 
             while(true){
                 DatagramPacket received = new DatagramPacket(buffer, buffer.length);
@@ -62,8 +62,8 @@ public class Servers implements Runnable {
                         System.out.println("----------" + received_data + "----------");
                         byte [] byte_data = received_data.getBytes();
                         DatagramPacket reply = new DatagramPacket(byte_data, received_data.length() ,received.getAddress(), received.getPort());
-                        System.out.println("Message from the server " + server_name + " at the port " +RMIPortNum);
-                        LogObj.info("Message from the server " + server_name + " in list_movie at the port " +RMIPortNum);
+                        System.out.println("Message from the server " + server_name + " at the port " +CORBAPortNumber);
+                        LogObj.info("Message from the server " + server_name + " in list_movie at the port " +CORBAPortNumber);
                         datasocket.send(reply);
                         break;
                     case "bookMovieTickets":
@@ -71,8 +71,8 @@ public class Servers implements Runnable {
                         System.out.println("----------" + data_received + "----------");
                         byte [] data_byte = data_received.getBytes();
                         DatagramPacket response = new DatagramPacket(data_byte, data_received.length() ,received.getAddress(), received.getPort());
-                        System.out.println("Message from the server " + server_name + " at the port " +RMIPortNum);
-                        LogObj.info("Message from the server " + server_name + " in bookMovieTickets at the port " +RMIPortNum);
+                        System.out.println("Message from the server " + server_name + " at the port " +CORBAPortNumber);
+                        LogObj.info("Message from the server " + server_name + " in bookMovieTickets at the port " +CORBAPortNumber);
                         datasocket.send(response);
                         break;
                     case "booking_schedule":
@@ -80,8 +80,8 @@ public class Servers implements Runnable {
                         System.out.println("----------" + received_str + "----------");
                         byte [] data_byt = received_str.getBytes();
                         DatagramPacket answer = new DatagramPacket(data_byt, received_str.length() ,received.getAddress(), received.getPort());
-                        System.out.println("Message from the server " + server_name + " at the port " +RMIPortNum);
-                        LogObj.info("Message from the server " + server_name + " in booking_schedule at the port " +RMIPortNum);
+                        System.out.println("Message from the server " + server_name + " at the port " +CORBAPortNumber);
+                        LogObj.info("Message from the server " + server_name + " in booking_schedule at the port " +CORBAPortNumber);
                         datasocket.send(answer);
                         break;
                     case "cancelMovieTickets":
@@ -89,9 +89,30 @@ public class Servers implements Runnable {
                         System.out.println("----------" + str_received + "----------");
                         byte [] byt_data = str_received.getBytes();
                         DatagramPacket acknowledgment = new DatagramPacket(byt_data, str_received.length() ,received.getAddress(), received.getPort());
-                        System.out.println("Message from the server " + server_name + " at the port " +RMIPortNum);
-                        LogObj.info("Message from the server " + server_name + " in cancelMovieTickets at the port " +RMIPortNum);
+                        System.out.println("Message from the server " + server_name + " at the port " +CORBAPortNumber);
+                        LogObj.info("Message from the server " + server_name + " in cancelMovieTickets at the port " +CORBAPortNumber);
                         datasocket.send(acknowledgment);
+                        break;
+                    case "condition_checks":
+                        String condition_checks = null;
+                        boolean check = impobj.conditionChecks(movie_name, movie_id, tickets);
+                        System.out.println("----------" + check + "----------");
+                        if (check){
+                            condition_checks = "Yes";
+                        }
+                        byte [] bt_data = condition_checks.getBytes();
+                        DatagramPacket ack = new DatagramPacket(bt_data, condition_checks.length() ,received.getAddress(), received.getPort());
+                        System.out.println("Message from the server " + server_name + " at the port " +CORBAPortNumber);
+                        LogObj.info("Message from the server " + server_name + " in cancelMovieTickets at the port " +CORBAPortNumber);
+                        datasocket.send(ack);
+                    case "ExchangeMovieShow":
+                        String data_rcved = impobj.ExchangeMovieShow(customer_id, movie_name, movie_id, tickets);
+                        System.out.println("----------" + data_rcved + "----------");
+                        byte [] dt_byt = data_rcved.getBytes();
+                        DatagramPacket rspns = new DatagramPacket(dt_byt, data_rcved.length() ,received.getAddress(), received.getPort());
+                        System.out.println("Message from the server " + server_name + " at the port " +CORBAPortNumber);
+                        LogObj.info("Message from the server " + server_name + " in bookMovieTickets at the port " +CORBAPortNumber);
+                        datasocket.send(rspns);
                         break;
                     default:
                         System.out.println("Not working...!");
@@ -133,7 +154,7 @@ public class Servers implements Runnable {
 
             path = ncRef.to_name(this.server_name);
             ncRef.rebind(path, href);
-            System.out.println("Server is started at the PORT- "+ RMIPortNum);
+            System.out.println(this.server_name + " Server is started.");
 
             Runnable task = () -> {serve_listener(impobj, this.LogObj);};
             Thread t1 = new Thread(task);

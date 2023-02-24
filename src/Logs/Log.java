@@ -17,7 +17,7 @@ public class Log {
         file_handler = setFileHandler();
     }
     private File CreateFile(String fileName, boolean client_request, boolean server_request) {
-        final String dir = "D:/Academic/Concordia/Sem-1/DSD/Assignemnt/DMTMS/DistributedMovieTicketBookingManagementSystem/MovieTicketBookingSystem/src/Logs/";
+        final String dir = "D:\\Academic\\Concordia\\Sem-1\\DSD\\Assignemnt\\Git-Repo\\CORBA_DMTMS\\src\\Logs\\";
         if(client_request) {
             createDirectoryIfNotExist(dir,"Client_Logs");
             file = new File(dir+"Client_Logs/"+fileName+".log");
