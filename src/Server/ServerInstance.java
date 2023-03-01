@@ -14,7 +14,6 @@ public class ServerInstance {
         Runnable server_instance_atwater = new Servers(8001, "ATW", Logobj_atw, args);
 
 
-
         Log logger_ver;
         logger_ver = new Log("VER", false, true);
         Logger logObj_ver = Logger.getLogger("VER");

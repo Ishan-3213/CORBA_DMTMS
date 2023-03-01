@@ -1,0 +1,24 @@
+Feb 28, 2023 3:17:14 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Feb 28, 2023 3:17:20 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Feb 28, 2023 3:17:24 PM Client.Client AvailableOptions
+INFO: No movie slot found for the movie ACATAR
+Feb 28, 2023 3:17:31 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Feb 28, 2023 3:17:32 PM Client.Client AvailableOptions
+INFO: OUTE15032023-100
+OUTM16032023-100
+VERA03032023-50
+
+Feb 28, 2023 3:18:09 PM Client.Client AvailableOptions
+INFO: Admin wants to add movie slots.
+Feb 28, 2023 3:29:12 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Feb 28, 2023 3:29:19 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Feb 28, 2023 3:29:21 PM Client.Client AvailableOptions
+INFO: OUTE15032023-100
+OUTM16032023-100
+VERA03032023-50
+

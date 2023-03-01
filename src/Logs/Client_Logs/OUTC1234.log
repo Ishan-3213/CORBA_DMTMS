@@ -1,0 +1,16 @@
+Feb 28, 2023 4:14:41 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: OUTC1234
+Feb 28, 2023 4:14:48 PM Client.Client AvailableOptions
+INFO: OUTC1234 wants to book movie.
+Feb 28, 2023 4:14:59 PM Client.Client AvailableOptions
+INFO: 30 tickets booked for the movie AVENGER-OUTM29022023
+Feb 28, 2023 4:15:01 PM Client.Client AvailableOptions
+INFO: OUTC1234's booking schedule: 
+AVENGER-OUTM29022023:30
+
+Feb 28, 2023 4:15:16 PM Client.Client AvailableOptions
+INFO: Sorry can not exchange the movie.
+Feb 28, 2023 4:16:21 PM Client.Client AvailableOptions
+INFO: Process failed.
+Feb 28, 2023 4:16:25 PM Client.Client AvailableOptions
+INFO: OUTC1234 wants to book movie.

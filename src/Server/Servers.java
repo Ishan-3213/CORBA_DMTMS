@@ -94,9 +94,9 @@ public class Servers implements Runnable {
                         datasocket.send(acknowledgment);
                         break;
                     case "condition_checks":
-                        String condition_checks = null;
+                        String condition_checks = "No";
                         boolean check = impobj.conditionChecks(movie_name, movie_id, tickets);
-                        System.out.println("----------" + check + "----------");
+                        System.out.println("check----------" + check + "----------check");
                         if (check){
                             condition_checks = "Yes";
                         }

@@ -1,0 +1,128 @@
+Feb 28, 2023 3:38:14 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: VERC1234
+Feb 28, 2023 3:39:55 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 3:40:01 PM Client.Client AvailableOptions
+INFO: 20 tickets booked for the movie AVATAR-VERA03032023
+Feb 28, 2023 3:40:05 PM Client.Client AvailableOptions
+INFO: VERC1234's booking schedule: 
+AVATAR-VERA03032023:20
+
+Feb 28, 2023 3:40:25 PM Client.Client AvailableOptions
+INFO: Can not book tickets later than 1 week/before today.
+
+Feb 28, 2023 3:40:55 PM Client.Client AvailableOptions
+INFO: Process failed.
+Feb 28, 2023 3:41:41 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 3:46:18 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: VERC1234
+Feb 28, 2023 3:46:24 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 3:46:32 PM Client.Client AvailableOptions
+INFO: You cannot book more than 3 tickets on other theater
+Feb 28, 2023 3:48:04 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: VERC1234
+Feb 28, 2023 3:48:10 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 3:48:25 PM Client.Client AvailableOptions
+INFO: Can not book tickets later than 1 week/before today.
+
+Feb 28, 2023 3:48:28 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 3:48:35 PM Client.Client AvailableOptions
+INFO: 20 tickets booked for the movie AVATAR-VERA03032023
+Feb 28, 2023 3:48:57 PM Client.Client AvailableOptions
+INFO: Process failed.
+Feb 28, 2023 3:50:11 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 3:50:13 PM Client.Client AvailableOptions
+INFO: Sorry there is no show available for AVENEGER
+Feb 28, 2023 3:50:17 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 4:19:17 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: VERC1234
+Feb 28, 2023 4:19:21 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 4:19:35 PM Client.Client AvailableOptions
+INFO: 19 tickets booked for the movie TITANIC-VERM05032023
+Feb 28, 2023 4:19:37 PM Client.Client AvailableOptions
+INFO: VERC1234's booking schedule: 
+TITANIC-VERM05032023:19
+
+Feb 28, 2023 4:19:46 PM Client.Client AvailableOptions
+INFO: VERC1234 has no booked for the movie AVATAR
+Feb 28, 2023 4:19:47 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 4:19:52 PM Client.Client AvailableOptions
+INFO: VERC1234 User has entered invalid movie-ID
+
+Feb 28, 2023 4:20:00 PM Client.Client AvailableOptions
+INFO: VERC1234 has no booked movie tickets.
+Feb 28, 2023 4:21:26 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: VERC1234
+Feb 28, 2023 4:21:27 PM Client.Client AvailableOptions
+INFO: VERC1234's booking schedule: 
+TITANIC-VERM05032023:19
+
+Feb 28, 2023 4:21:42 PM Client.Client AvailableOptions
+INFO: VERC1234 has no booked for the movie AVATAR
+Feb 28, 2023 4:21:50 PM Client.Client AvailableOptions
+INFO: VERC1234 has no booked for the movieID                                     BREAK;
+Feb 28, 2023 4:22:10 PM Client.Client AvailableOptions
+INFO: Can not book tickets later than 1 week/before today.
+
+Feb 28, 2023 4:22:46 PM Client.Client AvailableOptions
+INFO: VERC1234 has no booked for the movieID OUTM16032023
+Feb 28, 2023 4:23:10 PM Client.Client AvailableOptions
+INFO: 19 Movie tickets for TITANIC has been removed & 19 tickets booked for the movie AVATAR-VERA03032023
+Feb 28, 2023 4:23:18 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 4:23:25 PM Client.Client AvailableOptions
+INFO: VERC1234 User has entered invalid movie-ID
+
+Feb 28, 2023 4:23:31 PM Client.Client AvailableOptions
+INFO: VERC1234's booking schedule: 
+AVATAR-VERA03032023:19
+
+Feb 28, 2023 4:23:36 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 4:23:49 PM Client.Client AvailableOptions
+INFO: VERC1234 User has entered invalid movie-ID
+
+Feb 28, 2023 4:23:54 PM Client.Client AvailableOptions
+INFO: VERC1234 has no booked for the movieID VERM05032023
+Feb 28, 2023 4:24:11 PM Client.Client AvailableOptions
+INFO: 19 Movie tickets for AVATAR has been removed & 19 tickets booked for the movie TITANIC-VERM05032023
+Feb 28, 2023 4:24:15 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 4:24:25 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 4:24:30 PM Client.Client AvailableOptions
+INFO: 1 Seats are not available for the TITANIC - VERM05032023
+Feb 28, 2023 4:24:31 PM Client.Client AvailableOptions
+INFO: VERC1234's booking schedule: 
+TITANIC-VERM05032023:19
+
+Feb 28, 2023 4:27:20 PM Client.Client AvailableOptions
+INFO: Client has been logged with ID: VERC1234
+Feb 28, 2023 4:27:22 PM Client.Client AvailableOptions
+INFO: VERC1234 wants to book movie.
+Feb 28, 2023 4:27:30 PM Client.Client AvailableOptions
+INFO: 20 tickets booked for the movie TITANIC-VERM05032023
+Feb 28, 2023 4:27:32 PM Client.Client AvailableOptions
+INFO: VERC1234's booking schedule: 
+TITANIC-VERM05032023:20
+
+Feb 28, 2023 4:27:42 PM Client.Client AvailableOptions
+INFO: VERC1234's booking schedule: 
+TITANIC-VERM05032023:20
+
+Feb 28, 2023 4:28:54 PM Client.Client AvailableOptions
+INFO: 20 Movie tickets for TITANIC has been removed & 20 tickets booked for the movie AVENGER-OUTM29022023
+Feb 28, 2023 4:28:57 PM Client.Client AvailableOptions
+INFO: VERC1234's booking schedule: 
+AVENGER-OUTM29022023:20
+
+Feb 28, 2023 4:29:18 PM Client.Client AvailableOptions
+INFO: 20 Movie tickets for AVENGER has been removed & 20 tickets booked for the movie TITANIC-VERE02032023
