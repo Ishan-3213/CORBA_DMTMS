@@ -55,7 +55,7 @@ public class Servers implements Runnable {
                 movie_id = splitted[2];
                 movie_name = splitted[1];
                 method = splitted[0];
-                System.out.println(data+ "\n" +  method + "\n" + movie_name);
+                System.out.println(data+ "\n" +  method + "\n" + movie_name + "\n");
                 switch(method){
                     case "list_movie":
                         String received_data = impobj.list_movie(movie_name);

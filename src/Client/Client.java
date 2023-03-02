@@ -114,7 +114,7 @@ public class Client {
                                 System.out.println();
                                 System.out.println("Enter the movieId you want to book.");
                                 movieID = (read.nextLine()).toUpperCase();
-                                if (!movieID.isEmpty() && movieID.length() < 12){
+                                if (!movieID.isEmpty() && movieID.length() < 11){
                                     System.out.println("Please enter valid movie-ID\n");
                                     LogObj.info(user_id + " User has entered invalid movie-ID\n");
                                     break;
@@ -179,7 +179,7 @@ public class Client {
                                 System.out.println();
                                 System.out.println("Enter the movieId you want to cancel.");
                                 movieID = (read.nextLine()).toUpperCase();
-                                if (!booked_movie.contains(movieID)){
+                                if (!booked_movie.contains(movieID) | movieID.length()<11){
                                     System.out.println("You have no show booked for the movieID "+ movieID );
                                     LogObj.info(user_id + " has no booked for the movieID "+ movieID);
                                     break;
@@ -304,6 +304,11 @@ public class Client {
                                 System.out.println();
                                 System.out.println("Enter movieId for the movie - " + movieName);
                                 movieID = (read.nextLine()).toUpperCase();
+                                if (movieID.isEmpty() | movieID.length()<11){
+                                    System.out.println("Invalid movie-ID!\n");
+                                    LogObj.info(user_id + " User has entered invalid movie-ID\n");
+                                    break;
+                                }
                                 long days = DaysLeft(movieID);
                                 if (days>30 | days<0) {
                                     System.out.println("Can not add slots later than 1 months/before today.");
@@ -339,6 +344,11 @@ public class Client {
                                 System.out.println();
                                 System.out.println("Enter movieId for the movie - " + movieName);
                                 movieID = (read.nextLine()).toUpperCase();
+                                if (movieID.isEmpty() | movieID.length()<11){
+                                    System.out.println("Invalid movie-ID!\n");
+                                    LogObj.info(user_id + " User has entered invalid movie-ID\n");
+                                    break;
+                                }
                                 long remove_day_check = DaysLeft(movieID);
                                 if (remove_day_check>30 | remove_day_check<0) {
                                     System.out.println("Can not remove slots later than 1 months/before today.");
@@ -402,6 +412,11 @@ public class Client {
                                 System.out.println();
                                 System.out.println("Enter the movieId you want to book.");
                                 movieID = (read.nextLine()).toUpperCase();
+                                if (movieID.isEmpty() | movieID.length()<11){
+                                    System.out.println("Invalid movie-ID!\n");
+                                    LogObj.info(user_id + " User has entered invalid movie-ID\n");
+                                    break;
+                                }
                                 long days_check = DaysLeft(movieID);
                                 if (days_check>7 | days_check<0) {
                                     System.out.println("Can not book tickets later than 1 week.");

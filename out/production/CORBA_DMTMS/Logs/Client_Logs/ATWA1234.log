@@ -22,3 +22,165 @@ INFO: OUTE15032023-100
 OUTM16032023-100
 VERA03032023-50
 
+Mar 01, 2023 12:59:15 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 01, 2023 12:59:34 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 01, 2023 12:59:36 PM Client.Client AvailableOptions
+INFO: OUTM06032023-70
+OUTE15032023-100
+VERA03032023-50
+
+Mar 01, 2023 12:59:43 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 01, 2023 12:59:45 PM Client.Client AvailableOptions
+INFO: VERE02032023-50
+VERM05032023-50
+ATWA25032023-50
+
+Mar 01, 2023 1:00:52 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 01, 2023 1:01:17 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 01, 2023 1:01:19 PM Client.Client AvailableOptions
+INFO: VERE02032023-50
+VERM05032023-50
+ATWA25032023-50
+
+Mar 01, 2023 1:01:43 PM Client.Client AvailableOptions
+INFO: Movie slot for TITANIC has been removed
+Mar 01, 2023 1:01:47 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 01, 2023 1:01:48 PM Client.Client AvailableOptions
+INFO: VERE02032023-50
+VERM05032023-50
+
+Mar 01, 2023 11:28:11 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 01, 2023 11:28:20 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 01, 2023 11:28:22 PM Client.Client AvailableOptions
+INFO: OUTA01032023-100
+OUTM07032023-40
+ATWE08032023-20
+ATWM09032023-50
+
+Mar 01, 2023 11:28:55 PM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 01, 2023 11:32:35 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 01, 2023 11:32:37 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 01, 2023 11:32:38 PM Client.Client AvailableOptions
+INFO: OUTA01032023-100
+OUTM07032023-40
+ATWE08032023-30
+ATWM09032023-50
+
+Mar 01, 2023 11:32:57 PM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 01, 2023 11:35:30 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 01, 2023 11:35:36 PM Client.Client AvailableOptions
+INFO: ATWA1234 User has entered invalid movie-ID
+
+Mar 01, 2023 11:35:42 PM Client.Client AvailableOptions
+INFO: ATWA1234 User has entered invalid movie-ID
+
+Mar 01, 2023 11:35:48 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 01, 2023 11:35:50 PM Client.Client AvailableOptions
+INFO: OUTA01032023-100
+OUTM07032023-40
+ATWE08032023-50
+ATWM09032023-50
+
+Mar 01, 2023 11:36:05 PM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 01, 2023 11:37:19 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 01, 2023 11:37:25 PM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 02, 2023 12:11:31 AM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 02, 2023 12:11:33 AM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 02, 2023 12:11:35 AM Client.Client AvailableOptions
+INFO: OUTA01032023-100
+OUTM07032023-40
+ATWE08032023-50
+ATWM09032023-50
+
+Mar 02, 2023 12:11:55 AM Client.Client AvailableOptions
+INFO: ATWA1234 User has entered invalid movie-ID
+
+Mar 02, 2023 12:16:07 AM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 02, 2023 12:20:52 AM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 02, 2023 12:20:58 AM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 02, 2023 12:21:25 AM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 02, 2023 12:21:27 AM Client.Client AvailableOptions
+INFO: OUTA01032023-65
+OUTM07032023-40
+ATWE08032023-50
+
+Mar 02, 2023 12:24:19 AM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 02, 2023 12:24:21 AM Client.Client AvailableOptions
+INFO: OUTM06032023-100
+OUTE15032023-100
+VERA03032023-50
+
+Mar 02, 2023 12:25:43 AM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 02, 2023 12:25:45 AM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 02, 2023 12:25:48 AM Client.Client AvailableOptions
+INFO: OUTM06032023-100
+OUTE15032023-100
+VERA03032023-50
+
+Mar 02, 2023 12:26:14 AM Client.Client AvailableOptions
+INFO: ATWA1234 User has entered invalid movie-ID
+
+Mar 02, 2023 12:26:17 AM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 02, 2023 12:26:19 AM Client.Client AvailableOptions
+INFO: ATWA25032023-50
+VERE02032023-50
+VERM05032023-50
+
+Mar 02, 2023 12:26:44 AM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 02, 2023 12:27:01 AM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 02, 2023 12:27:03 AM Client.Client AvailableOptions
+INFO: ATWE08032023-35
+OUTA01032023-100
+OUTM07032023-40
+
+Mar 02, 2023 12:27:29 AM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 02, 2023 12:32:38 AM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 02, 2023 12:32:40 AM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 02, 2023 12:32:42 AM Client.Client AvailableOptions
+INFO: ATWE08032023-50
+ATWM09032023-50
+OUTA01032023-100
+OUTM07032023-40
+
+Mar 02, 2023 12:38:36 AM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 02, 2023 12:38:37 AM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 02, 2023 12:38:39 AM Client.Client AvailableOptions
+INFO: ATWE08032023-50
+ATWM09032023-50
+OUTA01032023-100
+OUTM07032023-40
+

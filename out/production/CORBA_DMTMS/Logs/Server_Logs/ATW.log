@@ -282,3 +282,113 @@ Feb 28, 2023 8:44:33 PM Implementation.ImplementationOperations listMovieShowsAv
 INFO: List of movie shows has been shown.
 Feb 28, 2023 8:50:39 PM Implementation.ImplementationOperations listMovieShowsAvailability
 INFO: List of movie shows has been shown.
+Feb 28, 2023 9:05:44 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:11:44 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:11:53 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:12:00 PM Server.Servers serve_listener
+INFO: Message from the server ATW in booking_schedule at the port 8001
+Feb 28, 2023 9:12:20 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:12:53 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:17:32 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:18:19 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:20:34 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:20:47 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:21:10 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:21:19 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Feb 28, 2023 9:21:49 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 12:52:48 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 12:53:43 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 12:53:57 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 12:59:36 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 12:59:45 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 1:01:19 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 1:01:43 PM Implementation.ImplementationOperations removeMovieSlots
+INFO: Movie slot for TITANIC has been removed
+Mar 01, 2023 1:01:48 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 11:26:41 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 11:26:51 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 11:26:57 PM Implementation.ImplementationOperations bookMovieTickets
+INFO: 30 tickets booked for the movie AVENGER-ATWE08032023
+Mar 01, 2023 11:27:07 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 11:28:22 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 11:28:55 PM Implementation.ImplementationOperations removeMovieSlots
+INFO: Movie slot for AVENGER has been removed
+Mar 01, 2023 11:32:16 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 11:32:21 PM Implementation.ImplementationOperations bookMovieTickets
+INFO: 20 tickets booked for the movie AVENGER-ATWE08032023
+Mar 01, 2023 11:32:38 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 11:32:57 PM Implementation.ImplementationOperations removeMovieSlots
+INFO: Movie slot for AVENGER has been removed
+Mar 01, 2023 11:35:50 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 11:36:05 PM Implementation.ImplementationOperations removeMovieSlots
+INFO: Movie slot for AVENGER has been removed
+Mar 01, 2023 11:37:04 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 01, 2023 11:37:09 PM Implementation.ImplementationOperations bookMovieTickets
+INFO: 20 tickets booked for the movie AVENGER-ATWE08032023
+Mar 01, 2023 11:37:25 PM Implementation.ImplementationOperations removeMovieSlots
+INFO: Movie slot for AVENGER has been removed
+Mar 02, 2023 12:11:35 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:12:07 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:15:44 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:15:49 AM Implementation.ImplementationOperations bookMovieTickets
+INFO: 20 tickets booked for the movie AVENGER-ATWM09032023
+Mar 02, 2023 12:16:12 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:20:39 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:20:41 AM Implementation.ImplementationOperations bookMovieTickets
+INFO: 20 tickets booked for the movie AVENGER-ATWM09032023
+Mar 02, 2023 12:20:58 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:20:58 AM Implementation.ImplementationOperations removeMovieSlots
+INFO: Movie slot for AVENGER has been removed
+Mar 02, 2023 12:21:27 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:24:21 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:25:48 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:26:19 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:26:44 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:26:44 AM Implementation.ImplementationOperations ExchangeMovieShow
+INFO: 15 tickets booked for the movie AVENGER-ATWE08032023
+Mar 02, 2023 12:26:44 AM Implementation.ImplementationOperations removeMovieSlots
+INFO: Movie slot for AVENGER has been removed
+Mar 02, 2023 12:27:03 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:32:42 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 02, 2023 12:38:39 AM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.

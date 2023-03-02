@@ -293,14 +293,14 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
         {
             if(numberOfTickets >3){
                 System.out.println("You cannot book more than 3 tickets on other theater");
-                return "You cannot book more than 3 tickets on other theater";
+                return "No You cannot book more than 3 tickets on other theater";
             }
         }
         for (String check_data : getBookingSchedule(customerID).split("\n")){
             if (check_data.contains(movieName+"-"+movieId+":")){}
             else if (check_data.contains(movieName) && check_data.contains(movieId.substring(4,12))) {
                 System.out.println("Already Booked ticket in another theater!");
-                return "Tickets are already booked in another theater.";
+                return "No Tickets are already booked in another theater.";
             }
         }
         if(movieId.substring(0,3).equals(this.server_name))  {
@@ -339,7 +339,7 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
                         }
                     }else{
                         LogObj.info(numberOfTickets + " Seats are not available for the " + movieName + " - " + movieId);
-                        return numberOfTickets + " Seats are not available for the " + movieName + " - " + movieId;
+                        return "No " + numberOfTickets + " Seats are not available for the " + movieName + " - " + movieId;
                     }
                 }else{
                     LogObj.info("No movie found with the ID" + movieId);
@@ -365,8 +365,18 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
     public String removeMovieSlots(String movieId, String movieName) {
         if(datastorage.containsKey(movieName)){
             if (datastorage.get(movieName).containsKey(movieId)){
+                String customers = RetrieveCustomers(movieId, movieName);
+                for (String cancel_movie_ticekts : customers.split("\n")){
+                    if (!cancel_movie_ticekts.isEmpty()){
+                        int tickets = Integer.parseInt(cancel_movie_ticekts.split(":")[1]);
+                        String response = cancelMovieTickets(cancel_movie_ticekts.split(":")[0], movieId, movieName, tickets);
+                        if (!response.toUpperCase().startsWith("NO")){
+                        }
+                    }
+                }
                 datastorage.get(movieName).remove(movieId, datastorage.get(movieName).get(movieId));
-                System.out.println();
+                MovieTicketsToNextShow(customers, movieName);
+                System.out.println("\n");
                 System.out.println(datastorage.get(movieName) +" after removal..!! ");
                 LogObj.info("Movie slot for " + movieName + " has been removed");
                 return "Movie slot for " + movieName + " has been removed";
@@ -380,15 +390,44 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
             return "No movie slot found for the movie " + movieName + " at " + movieId.substring(0, 3) + " region";
         }    }
 
+    public String RetrieveCustomers(String MovieId, String MovieName){
+        String movie_string = MovieName + "-" + MovieId;
+        StringBuilder SB = new StringBuilder();
+        for (HashMap.Entry<String, HashMap<String, Integer>> entry : user_data.entrySet()) {
+            if (entry.getValue().containsKey(movie_string)) {
+                String key = entry.getKey();
+                int tickets = entry.getValue().get(movie_string);
+                System.out.println("Key for value " + movie_string + " is: " + key);
+                SB.append(key).append(":").append(tickets).append("\n");
+            }
+//            System.out.println("Not working the eqals condition...!!"  + movie_string + "-----" + entry);
+        }
+        return SB.toString();
+    }
+
+    public void MovieTicketsToNextShow(String Customers, String MovieName){
+        String [] split_customer = Customers.split("\n");
+        String [] movie_shows = listMovieShowsAvailability(MovieName).split("\n");
+        for (String CustomerLoop : split_customer){
+            if (!CustomerLoop.isEmpty()) {
+                for (String MovieLoop : movie_shows) {
+                    if (!MovieLoop.isEmpty()){
+                        int tickets = Integer.parseInt(CustomerLoop.split(":")[1]);
+                        String response = ExchangeMovieShow(CustomerLoop.split(":")[0], MovieName, MovieLoop.split("<>")[0], tickets);
+                        if (!response.toUpperCase().startsWith("NO")) {
+                            System.out.println("Print found the tickets..." + response);
+                            break;
+                        }
+                        System.out.println("Not Found--->>>" + response);
+                    }
+                }
+            }
+        }
+    }
     @Override
     public String listMovieShowsAvailability(String movieName) {
         StringBuilder sBuilder = new StringBuilder();
         if (datastorage.containsKey(movieName)){
-            // method + "<>" + movie_name + "<>" + movie_id + "<>" + customer_id + "<>" + tickets
-            String data = this.UDPcall("list_movie" + "<>" + movieName + "<>" + null + "<>" + null + "<>" + 0);
-            data = data.replace(movieName+"<>", "");
-            sBuilder.append(data);
-            System.out.println("----------------------------------------------------------\n" +sBuilder.toString() + "\n----------------------------------------\n" );
             for (String OuterKey : this.datastorage.keySet()) {
 //                System.out.println(OuterKey);
                 if(OuterKey.equals(movieName)){
@@ -397,6 +436,12 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
                     }
                 }
             }
+            // method + "<>" + movie_name + "<>" + movie_id + "<>" + customer_id + "<>" + tickets
+            String data = this.UDPcall("list_movie" + "<>" + movieName + "<>" + null + "<>" + null + "<>" + 0);
+            data = data.replace(movieName+"<>", "");
+            sBuilder.append(data);
+            System.out.println("------------------------datastoragedatastoragedatastorage----------------------------------\n" +datastorage + "\n"+sBuilder.toString() + "\n----------------------------------------\n" );
+
             LogObj.info("List of movie shows has been shown.");
             return sBuilder.toString().replace(movieName + "<>", "");
         }else{
