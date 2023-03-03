@@ -86,20 +86,21 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
         orb = orb_val;
     }
 
+
+
     @Override
     public String exchangeMovieTickets(String customerID, String movieId, String movieName, String new_movieId, String new_movieName, int numberOfTickets) {
         String customer_schedule = getBookingSchedule(customerID);
         for (String x : customer_schedule.split("\n")){
             if (x.contains(movieName+"-"+movieId+":")){
-                String data = x.replace(movieName+"-"+movieId+":", "");
-                numberOfTickets = Integer.parseInt(data.trim());
-                System.out.println("\n\n\n checking the condition-->>" + numberOfTickets);
+                numberOfTickets = Integer.parseInt(x.replace(movieName+"-"+movieId+":", "").trim());
+                System.out.println("\n\n\nchecking the condition-->>" + numberOfTickets);
             }
         }
-        boolean can_book = conditionChecks(new_movieName, new_movieId,numberOfTickets);
+        boolean can_book = conditionChecks(new_movieName, new_movieId, numberOfTickets);
         if (can_book) {
             String check_cancel = cancelMovieTickets(customerID, movieId, movieName, numberOfTickets);
-            System.out.println("\n Process says-->" + check_cancel);
+            System.out.println("\nProcess says-->" + check_cancel);
             if (check_cancel.toUpperCase().substring(0,2).equals("NO") ){
                 return "Process failed to cancel movie tickets.";
             }
@@ -115,11 +116,15 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
     public String ExchangeMovieShow(String customerID,String new_movieName, String new_movieId, int numberOfTickets ){
             String methodsList;
             StringBuilder sBuilder = new StringBuilder();
+        if (customerID.isEmpty() | customerID.equals(null)){
+            return "No boking done.";
+        }
             if(new_movieId.substring(0,3).equals(this.server_name))  {
+                user_data.putIfAbsent(customerID, new HashMap<String, Integer>());
                 if(datastorage.containsKey(new_movieName)){
                     if(datastorage.get(new_movieName).containsKey(new_movieId)){
                         if(datastorage.get(new_movieName).get(new_movieId) >= numberOfTickets){
-                            System.out.println("Tickets in the server----->>" + server_name +  "\nStrg-->" + datastorage.get(new_movieName).get(new_movieId));
+                            System.out.println("Tickets in the server----->>" + server_name +  "\nStrg-->" + datastorage.get(new_movieName));
                             System.out.println("\n\n" + " tickets removal done-->> " + datastorage.get(new_movieName).get(new_movieId));
                             // Tickets are available
                             String movie_string = new_movieName + "-" + new_movieId;
@@ -145,7 +150,7 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
                                 System.out.println("User not in hashmap,,,!!!!\t" + customerID + "---->>>" +" tickets " + numberOfTickets);
                                 datastorage.get(new_movieName).put(new_movieId, datastorage.get(new_movieName).get(new_movieId) - numberOfTickets);
                                 System.out.println("data storage after negation---??? " + datastorage);
-                                user_data.put(customerID, new HashMap<>());
+                                if (customerID == null){return "No booking Done coz of null pointer.";}
                                 customer_booking_hashmap = user_data.get(customerID);
                                 customer_booking_hashmap.put(movie_string, numberOfTickets);
                                 user_data.put(customerID, customer_booking_hashmap);
@@ -155,7 +160,7 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
                             }
                         }else{
                             LogObj.info(numberOfTickets + " Seats are not available for the " + new_movieName + " - " + new_movieId);
-                            return "NO " + numberOfTickets + " Seats are not available for the " + new_movieName + " - " + new_movieId;
+                            return "NO " + numberOfTickets + " Seats are not available for the " + new_movieName + "-" + new_movieId;
                         }
                     }else{
                         LogObj.info("No movie found with the ID" + new_movieId);
@@ -228,8 +233,9 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
                         return numberOfTickets + " Movie tickets for " + movieName + " has been removed";
                     }else if((user_data.get(customerID).get(movie_string).equals(numberOfTickets))){
                         datastorage.get(movieName).put(movieID, datastorage.get(movieName).get(movieID) + numberOfTickets);
-                        user_data.get(customerID).remove(movie_string, user_data.get(customerID).get(movie_string));
-                        System.out.println(user_data.get(customerID).get(movie_string) + " ELSE Here is the user data "+ "\n...custome id"+user_data.get(customerID)+"\n ehole user data" + user_data);
+                        int tickets = user_data.get(customerID).get(movie_string);
+                        user_data.get(customerID).remove(movie_string, tickets);
+                        System.out.println(user_data.get(customerID).get(movie_string) + " ELSE Here is the user data "+ "\n...customer id"+user_data.get(customerID)+"\n whole user data" + user_data);
                         return numberOfTickets + " Movie tickets for " + movieName + " has been removed";
                     }else{
                         return "NO..!Please enter valid ticket number to be removed!!";
@@ -288,7 +294,9 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
     public String bookMovieTickets(String customerID, String movieId, String movieName, int numberOfTickets)  {
         String methodsList;
         StringBuilder sBuilder = new StringBuilder();
-
+        if (customerID.isEmpty() | customerID.equals(null)){
+            return "No boking done.";
+        }
         if(customerID.substring(0,3).equals(server_name)){}else
         {
             if(numberOfTickets >3){

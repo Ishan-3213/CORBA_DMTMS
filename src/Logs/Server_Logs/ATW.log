@@ -400,3 +400,85 @@ Mar 02, 2023 12:40:37 AM Implementation.ImplementationOperations removeMovieSlot
 INFO: Movie slot for AVENGER has been removed
 Mar 02, 2023 12:40:57 AM Implementation.ImplementationOperations listMovieShowsAvailability
 INFO: List of movie shows has been shown.
+Mar 03, 2023 12:28:25 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 12:28:37 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 12:28:44 PM Implementation.ImplementationOperations bookMovieTickets
+INFO: 30 tickets booked for the movie AVENGER-ATWE08032023
+Mar 03, 2023 12:29:20 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 12:29:31 PM Implementation.ImplementationOperations removeMovieSlots
+INFO: No movie slot found for the movie AVEGER at ATW region
+Mar 03, 2023 12:29:51 PM Implementation.ImplementationOperations removeMovieSlots
+INFO: No movie slot found for the movie AVNEGER at ATW region
+Mar 03, 2023 12:29:59 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 12:29:59 PM Implementation.ImplementationOperations ExchangeMovieShow
+INFO: 15 tickets booked for the movie AVENGER-ATWE08032023
+Mar 03, 2023 12:29:59 PM Implementation.ImplementationOperations removeMovieSlots
+INFO: Movie slot for AVENGER has been removed
+Mar 03, 2023 12:30:17 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 12:31:39 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 12:31:39 PM Implementation.ImplementationOperations removeMovieSlots
+INFO: Movie slot for AVENGER has been removed
+Mar 03, 2023 12:32:08 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 12:34:33 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 12:54:13 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 12:57:38 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 12:59:00 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:00:49 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:05:42 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:06:23 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:06:54 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:07:14 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:25:53 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:34:41 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:34:54 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:35:02 PM Server.Servers serve_listener
+INFO: Message from the server ATW in booking_schedule at the port 8001
+Mar 03, 2023 1:35:08 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:35:35 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:35:44 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:35:58 PM Server.Servers serve_listener
+INFO: Message from the server ATW in booking_schedule at the port 8001
+Mar 03, 2023 1:36:08 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:36:14 PM Server.Servers serve_listener
+INFO: Message from the server ATW in booking_schedule at the port 8001
+Mar 03, 2023 1:36:21 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:36:23 PM Server.Servers serve_listener
+INFO: Message from the server ATW in booking_schedule at the port 8001
+Mar 03, 2023 1:36:29 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:36:31 PM Server.Servers serve_listener
+INFO: Message from the server ATW in booking_schedule at the port 8001
+Mar 03, 2023 1:36:41 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:36:51 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:36:55 PM Server.Servers serve_listener
+INFO: Message from the server ATW in booking_schedule at the port 8001
+Mar 03, 2023 1:37:29 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.
+Mar 03, 2023 1:37:44 PM Implementation.ImplementationOperations listMovieShowsAvailability
+INFO: List of movie shows has been shown.

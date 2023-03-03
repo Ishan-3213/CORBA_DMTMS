@@ -55,7 +55,7 @@ public class Servers implements Runnable {
                 movie_id = splitted[2];
                 movie_name = splitted[1];
                 method = splitted[0];
-                System.out.println(data+ "\n" +  method + "\n" + movie_name + "\n");
+                System.out.println(data+ "\n" +  method + "\n" + movie_name + "\n" + movie_id + "\n" + customer_id +"\n" + tickets + "\n");
                 switch(method){
                     case "list_movie":
                         String received_data = impobj.list_movie(movie_name);
@@ -105,6 +105,7 @@ public class Servers implements Runnable {
                         System.out.println("Message from the server " + server_name + " at the port " +CORBAPortNumber);
                         LogObj.info("Message from the server " + server_name + " in cancelMovieTickets at the port " +CORBAPortNumber);
                         datasocket.send(ack);
+                        break;
                     case "ExchangeMovieShow":
                         String data_rcved = impobj.ExchangeMovieShow(customer_id, movie_name, movie_id, tickets);
                         System.out.println("----------" + data_rcved + "----------");

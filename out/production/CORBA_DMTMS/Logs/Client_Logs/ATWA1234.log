@@ -184,3 +184,71 @@ ATWM09032023-50
 OUTA01032023-100
 OUTM07032023-40
 
+Mar 02, 2023 12:40:26 AM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 02, 2023 12:40:37 AM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 02, 2023 12:40:55 AM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 02, 2023 12:40:57 AM Client.Client AvailableOptions
+INFO: ATWE08032023-35
+OUTA01032023-100
+OUTM07032023-40
+
+Mar 02, 2023 3:49:15 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 02, 2023 3:49:18 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 03, 2023 12:28:15 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 03, 2023 12:28:16 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 03, 2023 12:28:18 PM Client.Client AvailableOptions
+INFO: No movie slot found for the movie AVEGER
+Mar 03, 2023 12:28:22 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 03, 2023 12:28:25 PM Client.Client AvailableOptions
+INFO: ATWE08032023-50
+ATWM09032023-50
+OUTA01032023-100
+OUTM07032023-40
+
+Mar 03, 2023 12:28:35 PM Client.Client AvailableOptions
+INFO: ATWA1234 wants to book movie.
+Mar 03, 2023 12:28:44 PM Client.Client AvailableOptions
+INFO: 30 tickets booked for the movie AVENGER-ATWE08032023
+Mar 03, 2023 12:29:19 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 03, 2023 12:29:20 PM Client.Client AvailableOptions
+INFO: ATWE08032023-20
+ATWM09032023-50
+OUTA01032023-100
+OUTM07032023-40
+
+Mar 03, 2023 12:29:31 PM Client.Client AvailableOptions
+INFO: No movie slot found for the movie AVEGER at ATW region
+Mar 03, 2023 12:29:51 PM Client.Client AvailableOptions
+INFO: No movie slot found for the movie AVNEGER at ATW region
+Mar 03, 2023 12:29:59 PM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 03, 2023 12:30:16 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 03, 2023 12:30:17 PM Client.Client AvailableOptions
+INFO: ATWE08032023-5
+OUTA01032023-100
+OUTM07032023-40
+
+Mar 03, 2023 12:31:39 PM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 03, 2023 12:32:05 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 03, 2023 12:32:08 PM Client.Client AvailableOptions
+INFO: OUTA01032023-55
+OUTM07032023-40
+
+Mar 03, 2023 12:34:37 PM Client.Client AvailableOptions
+INFO: Process failed to book new movie tickets.
+Mar 03, 2023 12:53:29 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: ATWA1234
+Mar 03, 2023 12:53:36 PM Client.Client AvailableOptions
+INFO: ATWA1234 has no booked movie tickets.
