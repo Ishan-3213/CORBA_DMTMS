@@ -1,0 +1,81 @@
+Mar 06, 2023 3:12:54 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: OUTA1234
+Mar 06, 2023 3:12:56 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 06, 2023 3:12:57 PM Client.Client AvailableOptions
+INFO: OUTM09032023-25
+OUTA11032023-100
+
+Mar 06, 2023 3:13:06 PM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 06, 2023 3:13:30 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 06, 2023 3:13:32 PM Client.Client AvailableOptions
+INFO: OUTA11032023-75
+
+Mar 06, 2023 3:13:38 PM Client.Client AvailableOptions
+INFO: Movie slot for AVENGER has been removed
+Mar 06, 2023 3:14:35 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 06, 2023 3:14:37 PM Client.Client AvailableOptions
+INFO: Sorry there is no show available for-> AVENGER
+Mar 06, 2023 3:14:52 PM Client.Client AvailableOptions
+INFO: OUTA1234 has no booked movie tickets.
+Mar 06, 2023 3:14:58 PM Client.Client AvailableOptions
+INFO: OUTA1234 wants to book movie.
+Mar 06, 2023 3:15:06 PM Client.Client AvailableOptions
+INFO: OUTA1234 wants to book movie.
+Mar 06, 2023 3:15:12 PM Client.Client AvailableOptions
+INFO: No You cannot book more than 3 tickets on other theater
+Mar 06, 2023 3:15:22 PM Client.Client AvailableOptions
+INFO: OUTA1234 wants to book movie.
+Mar 06, 2023 3:15:27 PM Client.Client AvailableOptions
+INFO: 3 tickets booked for the movie AVATAR-VERA09032023
+Mar 06, 2023 3:17:58 PM Client.Client AvailableOptions
+INFO: 3 Movie tickets for AVATAR has been removed & 3 tickets booked for the movie TITANIC-ATWA08032023
+Mar 06, 2023 3:18:14 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 06, 2023 3:18:16 PM Client.Client AvailableOptions
+INFO: VERA09032023-50
+
+Mar 06, 2023 3:19:10 PM Client.Client AvailableOptions
+INFO: Admin wants to add movie slots.
+Mar 06, 2023 3:19:46 PM Client.Client AvailableOptions
+INFO: Movie slot added.
+Mar 06, 2023 3:19:49 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 06, 2023 3:19:50 PM Client.Client AvailableOptions
+INFO: OUTA10032023-40
+VERA09032023-50
+
+Mar 06, 2023 3:19:59 PM Client.Client AvailableOptions
+INFO: OUTA1234 wants to book movie.
+Mar 06, 2023 3:20:03 PM Client.Client AvailableOptions
+INFO: No 41 Seats are not available for the AVATAR - OUTA10032023
+Mar 06, 2023 3:21:48 PM Client.Client AvailableOptions
+INFO: OUTA1234 wants to book movie.
+Mar 06, 2023 3:21:54 PM Client.Client AvailableOptions
+INFO: 40 tickets booked for the movie AVATAR-OUTA10032023
+Mar 06, 2023 3:23:35 PM Client.Client AvailableOptions
+INFO: OUTA1234 has no booked for the movieID DATASTORAGE.PUT("AVATAR", NEW HASHMAP<STRING, INTEGER>());
+Mar 06, 2023 3:24:02 PM Client.Client AvailableOptions
+INFO: 40 Movie tickets for AVATAR has been removed & 40 tickets booked for the movie TITANIC-ATWA08032023
+Mar 06, 2023 3:24:06 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 06, 2023 3:24:08 PM Client.Client AvailableOptions
+INFO: ATWA08032023-7
+VERE08032023-50
+VERM09032023-50
+
+Mar 06, 2023 3:24:15 PM Client.Client AvailableOptions
+INFO: Admin wants to list movie shows.
+Mar 06, 2023 3:24:17 PM Client.Client AvailableOptions
+INFO: Sorry there is no show available for-> AVENGER
+Mar 06, 2023 3:24:36 PM Client.Client AvailableOptions
+INFO: Sorry there is no show available for AVENGER
+Mar 06, 2023 3:24:51 PM Client.Client AvailableOptions
+INFO: OUTA1234 has no booked for the movie ASDSA
+Mar 06, 2023 3:25:09 PM Client.Client AvailableOptions
+INFO: Admin has logged in with Id: OUTA1234
+Mar 06, 2023 3:25:26 PM Client.Client AvailableOptions
+INFO: OUTA1234 wants to book movie.

@@ -120,7 +120,7 @@ public class Client {
                                     break;
                                 }
                                 long days = DaysLeft(movieID);
-                                if (days>7 | days<0) {
+                                if (days>7 | days<1) {
                                     System.out.println("Can not book tickets later than 1 week/before today.\n");
                                     LogObj.info("Can not book tickets later than 1 week/before today.\n");
                                     break;
@@ -185,7 +185,7 @@ public class Client {
                                     break;
                                 }
                                 long days_check = DaysLeft(movieID);
-                                if (days_check<0) {
+                                if (days_check<1) {
                                     System.out.println("Can not cancel tickets before today.\n");
                                     LogObj.info("Can not cancel tickets before today.\n");
                                     break;
@@ -249,7 +249,7 @@ public class Client {
                                     break;
                                 }
                                 long day = DaysLeft(new_movieID);
-                                if (day>7 | day<0) {
+                                if (day>7 | day<1) {
                                     System.out.println("Can not book tickets later than 1 week/before today.\n");
                                     LogObj.info("Can not book tickets later than 1 week/before today.\n");
                                     break;
@@ -287,8 +287,8 @@ public class Client {
                         System.out.println("4. Book movie tickets.");
                         System.out.println("5. List your booked movie tickets.");
                         System.out.println("6. Exchange the movie Tickets.");
-                        System.out.println("7. Cancel movie tickets / Exit. ");
-//                    System.out.println("7. ");
+                        System.out.println("7. Cancel movie tickets. ");
+                        System.out.println("8. Exit.");
 //                        user_choice = Integer.parseInt(read.nextLine());
                         user_choice = read.nextLine();
                         switch (user_choice) {
@@ -309,11 +309,6 @@ public class Client {
                                     LogObj.info(user_id + " User has entered invalid movie-ID\n");
                                     break;
                                 }
-                                long days = DaysLeft(movieID);
-                                if (days>30 | days<0) {
-                                    System.out.println("Can not add slots later than 1 months/before today.");
-                                    break;
-                                }
                                 if(movieID.substring(0,3).equals(user_id.substring(0,3))){
                                     while(movieID.length()<11){
                                         System.out.println("\nPlease enter valid movie details..!!");
@@ -324,6 +319,11 @@ public class Client {
                                         System.out.println();
                                         System.out.println("Enter movieId for the movie - " + movieName + " ");
                                         movieID = (read.nextLine()).toUpperCase();
+                                    }
+                                    long days = DaysLeft(movieID);
+                                    if (days>7 | days<1) {
+                                        System.out.println("Can not add slots later than 1 week/before today/today.");
+                                        break;
                                     }
                                     System.out.println();
                                     System.out.println("Enter capacity for the Movie: " + movieName + " with the MovieId: "+ movieID);
@@ -337,6 +337,7 @@ public class Client {
                                     LogObj.info("You have no permission to add movies in region! " + movieID.substring(0,3));
                                     break;
                                 }
+
                             case "2":
                                 System.out.println("Enter movie name you want to remove from the option.");
                                 System.out.println("AVATAR \t AVENGER \t TITANIC");
@@ -349,8 +350,15 @@ public class Client {
                                     LogObj.info(user_id + " User has entered invalid movie-ID\n");
                                     break;
                                 }
+                                if(movieID.substring(0,3).equals(user_id.substring(0,3))){
+
+                                }else{
+                                System.out.println("You have no permission to remove movies in region! " + movieID.substring(0,3));
+                                LogObj.info("You have no permission to remove movies in region! " + movieID.substring(0,3));
+                                break;
+                                }
                                 long remove_day_check = DaysLeft(movieID);
-                                if (remove_day_check>30 | remove_day_check<0) {
+                                if (remove_day_check>7 | remove_day_check<0) {
                                     System.out.println("Can not remove slots later than 1 months/before today.");
                                     break;
                                 }
@@ -381,9 +389,9 @@ public class Client {
                                     movieName = (read.nextLine()).toUpperCase();
                                 }
                                 String movie_shows = intOpr.listMovieShowsAvailability(movieName);
-                                if(movie_shows.isEmpty()){
+                                if(movie_shows.isEmpty() | movie_shows.toUpperCase().startsWith("NO")){
                                     System.out.println();
-                                    System.out.println("Sorry there is no show available for-> " + movieName + "\n");
+                                    System.out.println("There is no show available for-> " + movieName + "\n");
                                     LogObj.info("Sorry there is no show available for-> " + movieName);
                                 }
                                 else{
@@ -418,7 +426,7 @@ public class Client {
                                     break;
                                 }
                                 long days_check = DaysLeft(movieID);
-                                if (days_check>7 | days_check<0) {
+                                if (days_check>7 | days_check<1) {
                                     System.out.println("Can not book tickets later than 1 week.");
                                     break;
                                 }
@@ -498,7 +506,7 @@ public class Client {
                                     break;
                                 }
                                 long day = DaysLeft(new_movieID);
-                                if (day>7 | day<0) {
+                                if (day>7 | day<1) {
                                     System.out.println("Can not book tickets later than 1 week/before today.\n");
                                     LogObj.info("Can not book tickets later than 1 week/before today.\n");
                                     break;
@@ -509,6 +517,55 @@ public class Client {
                                 LogObj.info(exchange_movie);
                                 break;
                             case "7":
+                                System.out.println("\nPlease Enter UserId again: ");
+                                String userId_cancel = (read.nextLine()).toUpperCase();
+                                boolean check_data = true;
+                                while(userId_cancel.length() > 8 | !user_id.equals(userId_cancel)){
+                                    System.out.println("Unauthorized ... !! Please enter valid UserId !!");
+                                    LogObj.info(user_id + " has no authorization.");
+                                    check_data = false;
+                                    break;
+                                }
+                                if (!check_data)break;
+                                String booked_movie =intOpr.getBookingSchedule(user_id);
+                                if(booked_movie.isEmpty()){
+                                    System.out.println("There is no booked movie tickets found with the ID -" + user_id);
+                                    LogObj.info(user_id + " has no booked movie tickets.");
+                                    break;
+                                }
+                                else{
+                                    System.out.println("\nHere is the booked shows with the userID - "+user_id);
+                                    System.out.println(booked_movie + "\n");
+                                }
+                                System.out.println("Enter movie name you want to cancel from the option.");
+                                System.out.println("AVATAR \t AVENGER \t TITANIC");
+                                movieName = (read.nextLine()).toUpperCase();
+                                if (!booked_movie.contains(movieName)){
+                                    System.out.println("You have no show booked for the movie "+ movieName );
+                                    LogObj.info(user_id + " has no booked for the movie "+ movieName);
+                                    break;
+                                }
+                                System.out.println();
+                                System.out.println("Enter the movieId you want to cancel.");
+                                movieID = (read.nextLine()).toUpperCase();
+                                if (!booked_movie.contains(movieID) | movieID.length()<11){
+                                    System.out.println("You have no show booked for the movieID "+ movieID );
+                                    LogObj.info(user_id + " has no booked for the movieID "+ movieID);
+                                    break;
+                                }
+                                long days_chck = DaysLeft(movieID);
+                                if (days_chck<1) {
+                                    System.out.println("Can not cancel tickets before today.\n");
+                                    LogObj.info("Can not cancel tickets before today.\n");
+                                    break;
+                                }
+                                System.out.println("\nPlease enter number of tickets for the movie " + movieName + "-" +movieID);
+                                capacity = Integer.parseInt(read.nextLine());
+                                String reply = intOpr.cancelMovieTickets(user_id, movieID, movieName, capacity);
+                                System.out.println(reply);
+                                LogObj.info(reply);
+                                break;
+                            case "8":
                                 System.out.println("Logging out from the - " + user_id);
                                 choice = false;
                                 login = false;

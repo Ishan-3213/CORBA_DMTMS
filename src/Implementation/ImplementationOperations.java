@@ -34,51 +34,52 @@ public class ImplementationOperations extends InterfaceOperatiosPOA {
         if(server_name.equals("ATW")){
 
             booking_hashmap = datastorage.get("AVENGER");
-            booking_hashmap.put("ATWM09032023", 50);
-            booking_hashmap.put("ATWE08032023", 50);
+            booking_hashmap.put("ATWM07032023", 50);
+            booking_hashmap.put("ATWE09032023", 50);
+
             datastorage.put("AVENGER", booking_hashmap);
 
             booking_hashmap = datastorage.get("TITANIC");
-            booking_hashmap.put("ATWA25032023", 50);
+            booking_hashmap.put("ATWA08032023", 50);
             datastorage.put("TITANIC", booking_hashmap);
 
             user_data.put("ATWC1234", new HashMap<String, Integer>());
 
             customer_booking_hashmap = user_data.get("ATWC1234");
-            customer_booking_hashmap.put("AVENGER-ATWM09032023", 15);
+            customer_booking_hashmap.put("AVENGER-ATWM07032023", 15);
             user_data.put("ATWC1234", customer_booking_hashmap);
 
         }else if(server_name.equals("VER")){
             booking_hashmap = datastorage.get("AVATAR");
-            booking_hashmap.put("VERA03032023", 50);
+            booking_hashmap.put("VERA09032023", 50);
             datastorage.put("AVATAR", booking_hashmap);
 
             booking_hashmap = datastorage.get("TITANIC");
-            booking_hashmap.put("VERE02032023", 50);
-            booking_hashmap.put("VERM05032023", 50);
+            booking_hashmap.put("VERE08032023", 50);
+            booking_hashmap.put("VERM09032023", 50);
             datastorage.put("TITANIC", booking_hashmap);
 
             user_data.put("VERC4321", new HashMap<String, Integer>());
 
             customer_booking_hashmap = user_data.get("VERC4321");
-            customer_booking_hashmap.put("TITANIC-VERM05032023", 10);
+            customer_booking_hashmap.put("TITANIC-VERE08032023", 10);
             user_data.put("VERC4321", customer_booking_hashmap);
 
         }else if(server_name.equals("OUT")){
 
-            booking_hashmap = datastorage.get("AVATAR");
-            booking_hashmap.put("OUTM06032023", 100);
-            booking_hashmap.put("OUTE15032023", 100);
-            datastorage.put("AVATAR", booking_hashmap);
+//            booking_hashmap = datastorage.get("AVATAR");
+//            booking_hashmap.put("OUTM06032023", 100);
+//            booking_hashmap.put("OUTE15032023", 100);
+//            datastorage.put("AVATAR", booking_hashmap);
 
             booking_hashmap = datastorage.get("AVENGER");
-            booking_hashmap.put("OUTA01032023", 100);
-            booking_hashmap.put("OUTM07032023", 40);
+            booking_hashmap.put("OUTM09032023", 40);
+            booking_hashmap.put("OUTA11032023", 100);
             datastorage.put("AVENGER", booking_hashmap);
 
             user_data.put("OUTC4321", new HashMap<String, Integer>());
             customer_booking_hashmap = user_data.get("OUTC4321");
-            customer_booking_hashmap.put("AVENGER-OUTM07032023", 10);
+            customer_booking_hashmap.put("AVENGER-OUTM09032023", 10);
             user_data.put("OUTC4321", customer_booking_hashmap);
         }
     }
